@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    
+
+    <h2>Form Validation Example</h2>
+
+<form name="myForm">  
+  Username:   <input type="text" name="id" id="user"> <br><br>
+  Password:   <input type="password" name="name" id="pass">
+  <br><br>
+  <input type="submit" name="submit" value="Submit" onclick="return validateForm()">  
+</form>
+
+<script>
+    function validateForm() {
+        let x = document.getElementById("user").value;
+        let y =document.getElementById("pass").value;
+        if (x == "" || y == "" ) {
+          alert("Name must be filled out");
+          alert("Password is required");
+          return false;
+        }
+     else{
+        return true ;
+     }
+      
+      }
+</script>
+</body>
+</html>
